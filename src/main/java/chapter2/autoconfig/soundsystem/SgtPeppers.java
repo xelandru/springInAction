@@ -1,4 +1,4 @@
-package soundsystem;
+package chapter2.autoconfig.soundsystem;
 
 import org.springframework.stereotype.Component;
 
