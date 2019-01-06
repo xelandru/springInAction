@@ -1,5 +1,5 @@
 package chapter2.autoconfig.soundsystem;
 
-public interface MediaPlayer {
+interface MediaPlayer {
     void play();
 }

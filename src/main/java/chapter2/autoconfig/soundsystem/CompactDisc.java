@@ -1,6 +1,5 @@
 package chapter2.autoconfig.soundsystem;
 
-public interface CompactDisc {
-
+interface CompactDisc {
     void play();
 }
