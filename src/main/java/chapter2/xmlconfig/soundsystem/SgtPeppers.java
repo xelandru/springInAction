@@ -1,4 +1,4 @@
-package chapter2.javaconfig.soundsystem;
+package chapter2.xmlconfig.soundsystem;
 
 class SgtPeppers implements CompactDisc {
 

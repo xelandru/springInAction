@@ -9,28 +9,36 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import static org.junit.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("c-context.xml")
-public class CDPlayerTest {
+@ContextConfiguration("cd-constructor-context.xml")
+public class CDPlayerWithConstructorTest {
 
     @Autowired
-    CompactDisc cd;
+    CompactDisc cdSgtPeppers;
 
     @Autowired
-    CDPlayer cdPlayer;
+    CompactDisc cdAbbeyRoad;
+
+    @Autowired
+    CDPlayer cdPlayer1;
+
+    @Autowired
+    CDPlayer cdPlayer2;
 
     @Test
     public void CompactDiscNotNull(){
-        assertNotNull(cd);
+        assertNotNull(cdAbbeyRoad);
+        assertNotNull(cdSgtPeppers);
     }
 
     @Test
     public void cdPlayerNotNull() {
-        assertNotNull(cdPlayer);
+        assertNotNull(cdPlayer1);
+        assertNotNull(cdPlayer2);
     }
 
     @Test
-    public void cdPlayerHasCD() {
-        assertNotNull(cdPlayer.getCd());
-        assertSame(cd, cdPlayer.getCd());
+    public void cdFromPlayerIsTheSameAsOutside() {
+        assertSame(cdPlayer1.getCompactDisc(), cdSgtPeppers);
+        assertSame(cdPlayer2.getCompactDisc(), cdAbbeyRoad);
     }
 }

@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
-    http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- configuration details go here -->
-    <bean id="compactDisc" class="chapter2.xmlconfig.soundsystem.SgtPeppers"/>
-    <bean id="cdPlayer" class="chapter2.xmlconfig.soundsystem.CDPlayer">
-        <constructor-arg ref="compactDisc"/>
-    </bean>
+    <bean id="cdSgtPeppers" class="chapter2.xmlconfig.soundsystem.SgtPeppers"/>
+    <bean id="cdPlayer1" class="chapter2.xmlconfig.soundsystem.CDPlayer" c:compactDisc-ref="cdSgtPeppers"/>
+
+    <bean id="cdAbbeyRoad"
+          class="chapter2.xmlconfig.soundsystem.BlankDisc"
+          c:_0="Abbey Road"
+          c:_1="The Beatles"/>
+
+    <bean id="cdPlayer2" class="chapter2.xmlconfig.soundsystem.CDPlayer" c:compactDisc-ref="cdAbbeyRoad"/>
 </beans>

@@ -1,15 +1,20 @@
-package chapter2.javaconfig.soundsystem;
+package chapter2.xmlconfig.soundsystem;
+
 
 class CDPlayer implements MediaPlayer {
 
-    private CompactDisc cd;
+    private CompactDisc compactDisc;
 
-    CDPlayer(CompactDisc cd) {
-        this.cd = cd;
+     CDPlayer(CompactDisc compactDisc) {
+        this.compactDisc = compactDisc;
+    }
+
+    public CompactDisc getCompactDisc() {
+        return compactDisc;
     }
 
     @Override
     public void play() {
-        cd.play();
+        compactDisc.play();
     }
 }

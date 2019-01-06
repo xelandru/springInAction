@@ -1,4 +1,4 @@
-package chapter2.javaconfig.soundsystem;
+package chapter2.xmlconfig.soundsystem;
 
 interface MediaPlayer {
     void play();
