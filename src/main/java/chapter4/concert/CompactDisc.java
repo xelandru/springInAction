@@ -1,6 +1,6 @@
-package chapter2.xmlconfig.soundsystem;
+package chapter4.concert;
 
 
 interface CompactDisc {
-    void play();
+    void playTrack(int trackNumber);
 }

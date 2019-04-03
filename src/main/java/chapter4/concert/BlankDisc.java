@@ -1,4 +1,4 @@
-package chapter2.xmlconfig.soundsystem;
+package chapter4.concert;
 
 
 import java.util.List;
@@ -15,12 +15,13 @@ public class BlankDisc implements CompactDisc {
         this.artist = artist;
     }
 
-    public void play() {
-        System.out.println("Playing " + title + " by " + artist);
-    }
-
     public void setTracks(List<String> tracks) {
 
         this.tracks = tracks;
+    }
+
+    @Override
+    public void playTrack(int trackNumber) {
+
     }
 }

@@ -1,7 +1,9 @@
 package chapter4.concert;
 
 
+import org.springframework.stereotype.Component;
 
+@Component
 public class RockPerformance implements Performance {
 
     @Override

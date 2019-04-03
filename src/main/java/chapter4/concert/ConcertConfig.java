@@ -19,4 +19,15 @@ public class ConcertConfig {
     Performance performance() {
         return new RockPerformance();
     }
+
+    @Bean
+    Encorable encorable() {
+        return new DefaultEncoreable();
+    }
+
+    @Bean
+    EncoreableIntroducer introducer() {
+        return new EncoreableIntroducer();
+    }
+
 }
