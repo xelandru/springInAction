@@ -3,7 +3,6 @@ package chapter5.spittr.web;
 
 import chapter5.spittr.data.Spittle;
 import chapter5.spittr.data.SpittleRepository;
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

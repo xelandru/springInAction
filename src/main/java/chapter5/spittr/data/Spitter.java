@@ -1,12 +1,25 @@
 package chapter5.spittr.data;
 
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class Spitter {
 
-    private String firstName;
-    private String lastName;
-    private String userName;
-    private String password;
     private Long id;
+
+    @NotNull
+    @Size(min = 5, max = 16)
+    private String firstName;
+    @NotNull
+    @Size(min = 5, max = 16)
+    private String lastName;
+    @NotNull
+    @Size(min = 2, max = 30)
+    private String userName;
+    @NotNull
+    @Size(min = 2, max = 30)
+    private String password;
 
 
     public Spitter(String firstName, String lastName, String userName, String password, Long id) {
@@ -24,7 +37,8 @@ public class Spitter {
         this.password = password;
     }
 
-    public Spitter(){}
+    public Spitter() {
+    }
 
     public String getFirstName() {
         return firstName;
