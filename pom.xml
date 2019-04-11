@@ -6,9 +6,12 @@
     <groupId>xelandru</groupId>
     <artifactId>spring.in.action</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>chp2</module>
+    </modules>
     <name>Spring In Action</name>
     <description>Tutorial for Spring</description>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
 
     <properties>
         <java.version>1.8</java.version>

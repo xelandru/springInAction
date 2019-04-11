@@ -11,7 +11,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan({"chapter5.spittr.web", "chapter5.spittr.data"})
+@ComponentScan("chapter5.spittr.web")
 public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Bean
