@@ -1,0 +1,77 @@
+package chapter10.domain;
+
+
+import java.util.Objects;
+
+public class Spitter {
+
+    private long id;
+    private String userName;
+    private String password;
+    private String fullName;
+
+    public Spitter(long id, String userName, String password, String fullName) {
+        this.id = id;
+        this.userName = userName;
+        this.password = password;
+        this.fullName = fullName;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Spitter spitter = (Spitter) o;
+        return id == spitter.id &&
+                Objects.equals(userName, spitter.userName) &&
+                Objects.equals(password, spitter.password) &&
+                Objects.equals(fullName, spitter.fullName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, userName, password, fullName);
+    }
+
+    @Override
+    public String toString() {
+        return "Spitter{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", fullName='" + fullName + '\'' +
+                '}';
+    }
+}
