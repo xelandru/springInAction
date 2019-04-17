@@ -30,10 +30,6 @@ public class DataSourceConfigurationTest {
     @Autowired
     SpitterRepository spitterRepository;
 
-    @Autowired
-    NamedParameterJdbcTemplate namedParameterJdbcTemplate;
-
-
     @Test
     public void testH2DataSource() throws SQLException {
         Connection connection = dataSource.getConnection();
